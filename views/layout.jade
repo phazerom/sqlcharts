@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/Chart.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    // These scripts are included at the end of body end-body-loading
+    script(src='/javascripts/Chart.bundle.min.js')
+    script(src='/javascripts/jquery-3.4.1.min.js')
+    // These scripts are using objects from end-body-loading
+    block customscript
