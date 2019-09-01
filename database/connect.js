@@ -3,9 +3,8 @@ const mysql = require('mysql');
 const chalk = require('chalk');
 
 if (!process.env.MYSQL_USERNAME || !process.env.MYSQL_PASSWORD) {
-    console.log(chalk.yellow(`Please make sure you have .env 
-        file in your project with:\n
-        MYSQL_USERNAME \n
+    console.log(chalk.yellow(`Please make sure you have .env file in your project with:
+        MYSQL_USERNAME
         MYSQL_PASSWORD`));
 }
 

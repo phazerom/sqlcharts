@@ -1,8 +1,11 @@
 $.get('/games/totalproduced/data', function(json, status){
     chartdata(json);
+    //console.log(json)
 });
 
 
+// This will create labels and dataset series data from
+// the fetched server data.
 function chartdata(json) {
   let chartdata = {};
   let labels = chartdata.labels = [];
@@ -18,6 +21,10 @@ function chartdata(json) {
   plotdata(chartdata)
 }
 
+
+// This will add some attributes to the chart such as title
+// and label texts.
+// Finally the datastrucrture will be fed to Chart object to be displayed
 function plotdata(chartdata) {
   let chartformat = {};
   chartformat.type = 'bar';

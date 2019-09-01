@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Plotting charts using quried database data' });
+  res.render('index', { title: 'Plotting charts using queried database data' });
 });
 
 router.get('/games/totalproduced/view', function(req, res, next) {
