@@ -2,6 +2,13 @@ const fs = require('fs');
 const mysql = require('mysql');
 const chalk = require('chalk');
 
+if (!process.env.MYSQL_USERNAME || !process.env.MYSQL_PASSWORD) {
+    console.log(chalk.yellow(`Please make sure you have .env 
+        file in your project with:\n
+        MYSQL_USERNAME \n
+        MYSQL_PASSWORD`));
+}
+
 var connection = mysql.createConnection({
     host: '35.187.228.151',
     port: '3306',
